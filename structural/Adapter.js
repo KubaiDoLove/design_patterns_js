@@ -43,3 +43,17 @@ const oldPrice = oldInterface.request(null, null, 50);
 const loggedInPrice = adapter.request(null, null, 50);
 
 console.log(oldPrice, loggedInPrice);
+
+//Also Не забываем, что в ЖС есть нативная фича похожая на адаптер
+
+const objectToAdapt = {
+    consoleCat: () => { console.log('cat') },
+    consoleDog: () => { console.log('dog') },
+    consoleMan: () => { console.log('man') }
+};
+
+const { consoleCat: gimmeCat, consoleDog: gimmeDog, consoleMan: gimmeMan} = objectToAdapt;
+
+gimmeCat();
+gimmeDog();
+gimmeMan();
