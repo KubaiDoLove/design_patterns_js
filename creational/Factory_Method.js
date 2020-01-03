@@ -1,3 +1,16 @@
+//создавать те или иные типы используемых классов
+export function createCar(model) {
+    let car = new Car(model);
+
+    if (typeof car.printModel === 'undefined') {
+        car.printModel = function() {
+            console.log('This car model is: ', car.model)
+        }
+    }
+
+    return car;
+}
+
 function Car(model) {
     this.model = model;
 
@@ -22,6 +35,7 @@ function CarHood(model) {
         build
     }
 }
+
 
 const panamera = new Car('Panamera');
 

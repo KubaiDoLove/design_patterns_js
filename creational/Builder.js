@@ -5,6 +5,8 @@ const Task = function (name, description, finished, dueDate) {
     this.dueDate = dueDate;
 };
 
+
+//Зачем: создание апи для используемых классов(Js-пометка, возвращение this в методе необходимо, чтобы выстраивать цепь вызовов методов)
 const TaskBuilder = function () {
     let name;
     let description;
