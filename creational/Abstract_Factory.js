@@ -1,4 +1,4 @@
-import { createCar } from "./Factory_Method";
+const createCar = require("./Factory_Method");
 
 //Зачем: Комбинирование Фактори методов, которые позволяют создавать те или иные типы используемых классов
 function CarFactory() {

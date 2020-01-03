@@ -1,5 +1,5 @@
 //создавать те или иные типы используемых классов
-export function createCar(model) {
+function createCar(model) {
     let car = new Car(model);
 
     if (typeof car.printModel === 'undefined') {
@@ -42,3 +42,5 @@ const panamera = new Car('Panamera');
 panamera.createDoor('left').build();
 panamera.createDoor('right').build();
 panamera.createHood().build();
+
+module.exports = createCar;
